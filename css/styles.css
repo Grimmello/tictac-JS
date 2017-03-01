@@ -1,0 +1,15 @@
+.jumbotron h1 {
+  text-align: center;
+}
+
+.container canvas {
+  border:1px solid black;
+  text-align: center;
+  margin-left: 37%;
+  margin-right: auto;
+  margin-top: 3%;
+}
+
+form {
+  text-align: center;
+}
