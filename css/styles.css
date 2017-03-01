@@ -4,11 +4,11 @@
 
 .container canvas {
   border:1px solid black;
-  text-align: center;
-  margin-left: 37%;
-  margin-right: auto;
+  display: block;
+  margin: 0 auto;
   margin-top: 3%;
 }
+
 
 form {
   text-align: center;
