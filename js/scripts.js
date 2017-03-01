@@ -10,21 +10,27 @@ function Player2(name, position){
 function Board (){
   var canvas = document.getElementById("canvas");
   var ctx = canvas.getContext("2d");
+  ctx.beginPath();
+  ctx.moveTo(200, 0);
+  ctx.lineTo(200, 600);
+  ctx.moveTo(400,0);
+  ctx.lineTo(400,600);
+  ctx.moveTo(0,200);
+  ctx.lineTo(600,200);
+  ctx.moveTo(0,400);
+  ctx.lineTo(600,400);
+  ctx.strokeStyle = "red";
+  ctx.stroke();
 }
 function UpdateGame(){
-//player1 goes first
-if (Player1Name.position === "X")
-//click to draw X
-//player2 goes next
-//click to draw O
+//PLAYER X GOES FIRST
+
 }
 function GameStart(name1,name2){
   var position1 = "X";
   var position2 = "O";
-  var player1Name = new Player1(name1, position1);
-  var player2Name = new Player2(name2, position2);
-  console.log(player1Name);
-  console.log(player2Name);
+  var playerX = new Player1(name1, position1);
+  var playerO = new Player2(name2, position2);
 }
 //Front End
 $(function(){
@@ -33,6 +39,6 @@ $(function(){
     var inputPlayer1 = $("input#player1").val();
     var inputPlayer2 = $("input#player2").val();
     GameStart(inputPlayer1, inputPlayer2);
-    Board();
   })
+  Board();
 })
